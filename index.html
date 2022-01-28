@@ -20,7 +20,7 @@
         </ul>
     </div>
 
-    <nav>
+    <nav role="navigation">
         <ul>
             <li><a href=".">Home</a></li>
             <li><a href=".">About</a></li>
@@ -40,7 +40,21 @@
             <label for="email">Email: </label>
             <input type="email" id ="email" name="email">
         </form>
+        <!-- itemscope describes the schema "bounding box" fro the object you are defining 
+             the type says which schema is being used - or which set of details -->
+        <article itemscope itemtype="https://schema.org/Person">
+            <img src="images/tmnt.jpg" alt="Teenage Mutant Ninja Turtles" aria-describeby="tmnt">
+            <section id="tmnt">
+                <p itemprop="name">TMNT</p>
+                <p itemprop="birthdate">December 27, 2001</p>
+                <p>The turtles are always looking for some pizza</p>
+            </section>
+        </article>
     </main>
+    <aside>
+        <!-- aria-label provides additional information or context about an object, like a link -->
+        <a href="" aria-label="Subscribe to the newsletter">Subscribe</a>
+    </aside>
     <footer>
 
     </footer>
